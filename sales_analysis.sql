@@ -39,3 +39,19 @@ VALUES
 (8, 'Hiruni Senanayake', 'Kandy'),
 (9, 'Nuwan Dias', 'Colombo'),
 (10, 'Piumi Karunaratne', 'Gampaha');
+
+
+-- Insert product data
+
+INSERT INTO products (product_id, product_name, category, price)
+VALUES
+(1, 'Laptop', 'Electronics', 850.00),
+(2, 'Smartphone', 'Electronics', 650.00),
+(3, 'Headphones', 'Electronics', 120.00),
+(4, 'Keyboard', 'Accessories', 45.00),
+(5, 'Mouse', 'Accessories', 25.00),
+(6, 'Monitor', 'Electronics', 300.00),
+(7, 'USB Cable', 'Accessories', 15.00),
+(8, 'Webcam', 'Electronics', 90.00),
+(9, 'Printer', 'Electronics', 220.00),
+(10, 'Laptop Bag', 'Accessories', 60.00);
