@@ -23,3 +23,19 @@ CREATE TABLE sales (
     FOREIGN KEY (customer_id) REFERENCES customers(customer_id),
     FOREIGN KEY (product_id) REFERENCES products(product_id)
 );
+
+
+-- Insert customer data
+
+INSERT INTO customers (customer_id, customer_name, city)
+VALUES
+(1, 'Kasun Perera', 'Colombo'),
+(2, 'Nimali Silva', 'Kandy'),
+(3, 'Amal Fernando', 'Galle'),
+(4, 'Tharushi Jayasuriya', 'Negombo'),
+(5, 'Dilan Peris', 'Colombo'),
+(6, 'Sachini Wijesinghe', 'Kurunegala'),
+(7, 'Ruwan Bandara', 'Matara'),
+(8, 'Hiruni Senanayake', 'Kandy'),
+(9, 'Nuwan Dias', 'Colombo'),
+(10, 'Piumi Karunaratne', 'Gampaha');
