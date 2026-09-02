@@ -81,3 +81,46 @@ VALUES
 (18, 8, 8, 1, '2026-04-10'),
 (19, 9, 2, 3, '2026-04-15'),
 (20, 10, 7, 6, '2026-04-20');
+
+-- ============================================
+-- SALES ANALYSIS QUERIES
+-- ============================================
+
+-- 1. Electronics products
+
+SELECT product_name
+FROM products
+WHERE category = 'Electronics';
+
+
+-- 2. Products priced above $100
+
+SELECT product_name, price
+FROM products
+WHERE price > 100;
+
+
+-- 3. Products sorted by price (highest to lowest)
+
+SELECT product_name, price
+FROM products
+ORDER BY price DESC;
+
+
+-- 4. Number of products in each category
+
+SELECT category,
+       COUNT(product_id) AS product_count
+FROM products
+GROUP BY category;
+
+
+-- 5. Total revenue by product
+
+SELECT product_name,
+       SUM(quantity * price) AS total_revenue
+FROM products P
+JOIN sales S
+USING (product_id)
+GROUP BY product_name
+ORDER BY total_revenue DESC;
