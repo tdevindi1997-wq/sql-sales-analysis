@@ -69,3 +69,45 @@ The **Smartphone** generated the highest revenue at **3,900.00**.
 - Calculated Fields
 - Data Analysis
 - Business Insights
+
+
+## Database Structure
+
+The project uses three relational tables:
+
+### Customers
+
+Stores customer information.
+
+- `customer_id` — Primary key
+- `customer_name`
+- `city`
+
+### Products
+
+Stores product information.
+
+- `product_id` — Primary key
+- `product_name`
+- `category`
+- `price`
+
+### Sales
+
+Stores individual sales transactions.
+
+- `sale_id` — Primary key
+- `customer_id` — Foreign key
+- `product_id` — Foreign key
+- `quantity`
+- `sale_date`
+
+### Relationships
+
+- `customers.customer_id` → `sales.customer_id`
+- `products.product_id` → `sales.product_id`
+
+## Project Files
+
+- [`sales_analysis.sql`](sales_analysis.sql) — Database creation, sample data, and analysis queries
+- `README.md` — Project overview, methodology, and key findings
