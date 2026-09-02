@@ -124,3 +124,35 @@ JOIN sales S
 USING (product_id)
 GROUP BY product_name
 ORDER BY total_revenue DESC;
+
+
+-- 6. Total revenue
+
+SELECT SUM(quantity * price) AS total_revenue
+FROM sales
+JOIN products
+USING (product_id);
+
+
+-- 7. Revenue by category
+
+SELECT category,
+       SUM(quantity * price) AS total_revenue
+FROM products P
+JOIN sales S
+USING (product_id)
+GROUP BY category
+ORDER BY total_revenue DESC;
+
+
+-- 8. Total spending by customer
+
+SELECT customer_name,
+       SUM(quantity * price) AS total_spent
+FROM customers C
+JOIN sales S
+USING (customer_id)
+JOIN products P
+USING (product_id)
+GROUP BY customer_name
+ORDER BY total_spent DESC;
